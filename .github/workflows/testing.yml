@@ -1,12 +1,11 @@
 on: [push]
 
-name: Jopi Integration
-job:
+jobs:
   runTest:
-    name: prueba1
+    name: Jopi Integration
     runs-on: ubuntu-latest
     steps:
-      - name: prueba2
+      - name: Paso 1
         uses: actions/checkout@v2
-      - name: prueba3
+      - name: Paso 2
         run: ls

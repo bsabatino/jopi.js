@@ -13,10 +13,16 @@ jobs:
           node-version: 12
           #registry-url: https://www.npmjs.com/
           #scope: "@bsabatino"
-      - name: yarn install
+      - name: npm install
+        run: npm install
+      - name: lerna install
+        run: npm install --global lerna
+      - name: iniciar lerna
+        run: lerna init
+      - name: instala yarn
         run: yarn install
-      - name: yarn coverage
-        run: yarn run coverage -u
+      #- name: yarn coverage
+      #  run: yarn run coverage -u
       - name: run yarn test
         run: yarn test
       - name: yarn build

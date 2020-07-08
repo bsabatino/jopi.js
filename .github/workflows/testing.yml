@@ -2,30 +2,38 @@ on: [push]
 
 jobs:
   runTest:
-    name: Jopi Integration
+    name: test for Jopi
     runs-on: ubuntu-latest
+
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
       - name: node install
         uses: actions/setup-node@v1
         with:
           node-version: 12
           #registry-url: https://www.npmjs.com/
           #scope: "@bsabatino"
-      - name: instala npm
+
+      - name: npm install
         run: npm install
-      - name: instala lerna
+
+      - name: lerna install
         run: npm install --global lerna
-      - name: inicia lerna
+
+      - name: iniciar lerna
         run: lerna init
+
       - name: instala yarn
         run: yarn install
       #- name: yarn coverage
       #  run: yarn run coverage -u
-      - name: corre yarn test (build y lint)
+      - name: run yarn test
         run: yarn test
-      - name: corre coverage
+
+      - name: yarn Jest
         run: yarn jest --coverage
-      - name: listar directorios
+
+      - name: listar
         run: ls

@@ -1,0 +1,12 @@
+on: [push]
+
+name: Jopi Integration
+job:
+  runTest:
+    name: prueba1
+    runs-on: ubuntu-latest
+    steps:
+      - name: prueba2
+        uses: actions/checkout@v2
+      - name: prueba3
+        run: ls

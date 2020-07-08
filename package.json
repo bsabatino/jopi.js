@@ -18,6 +18,11 @@
     "test": "yarn build && yarn lint && yarn coverage",
     "unit": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,json,md,yml}": [
       "prettier --write",

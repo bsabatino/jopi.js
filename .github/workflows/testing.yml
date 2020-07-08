@@ -23,11 +23,9 @@ jobs:
         run: yarn install
       #- name: yarn coverage
       #  run: yarn run coverage -u
-      - name: instala jest
-        run: yarn add --dev jest
-      - name: corre test de yarn
+      - name: corre yarn test (build y lint)
         run: yarn test
-      - name: compila yarn
-        run: yarn build
+      - name: corre coverage
+        run: yarn jest --coverage
       - name: listar directorios
         run: ls

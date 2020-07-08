@@ -15,7 +15,7 @@
     "lint": "yarn lint:js && yarn lint:styles",
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lerna-publish": "lerna publish",
-    "test": "yarn build && yarn lint",
+    "test": "yarn build && yarn lint && yarn coverage",
     "unit": "jest"
   },
   "husky": {

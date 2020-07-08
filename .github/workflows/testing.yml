@@ -5,7 +5,19 @@ jobs:
     name: Jopi Integration
     runs-on: ubuntu-latest
     steps:
-      - name: Paso 1
+      - name: checkout
         uses: actions/checkout@v2
-      - name: Paso 2
+      - name: node install
+        uses: actions/setup-node@v1
+          with:
+            node-version: 12
+            #registry-url: https://www.npmjs.com/
+            #scope: "@bsabatino"
+      - name: yarn install
+        run: yarn install
+      - name: run yarn test
+        run: yarn test
+      - name: yarn build
+        run: yarn build
+      - name: listar directorios
         run: ls
